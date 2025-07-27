@@ -1,3 +1,5 @@
+[![GitHub release](https://img.shields.io/github/v/release/wellingtonpragidi/RiseAjax)]()
+[![License](https://img.shields.io/github/license/wellingtonpragidi/RiseAjax)]()
 # RiseAjax
 Biblioteca RiseAjax: AJAX estilo jQuery, MUITO LEVE com fade effects, formulários e JSON. Vanilla JS, sem dependências. MIT license - pra quem odeia complicação!  
 
