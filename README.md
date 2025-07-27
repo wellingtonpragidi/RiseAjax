@@ -6,6 +6,8 @@ Adicione o arquivo JS ao seu projeto:
 
 ```html
 <script src="rise-ajax.js"></script>
+<!-- ou -->
+<script src="https://cdn.jsdelivr.net/gh/seu-usuario/rise-ajax@v1.0.0/src/rise-ajax.js"></script>
 ```
 ## Como Usar
 1. Requisições HTTP (***`RiseAjax`***`.request`)
