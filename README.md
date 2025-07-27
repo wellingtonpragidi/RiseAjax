@@ -5,9 +5,13 @@ Biblioteca RiseAjax: AJAX estilo jQuery, MUITO LEVE com fade effects, formulári
 Adicione o arquivo JS ao seu projeto:  
 
 ```html
-<script src="rise-ajax.js"></script>
-<!-- ou -->
+<script src="assets/js/rise-ajax.js"></script>
+<!-- codigo compactado -->
+<script src="assets/js/rise-ajax.min.js"></script>
+<!-- CDN -->
 <script src="https://cdn.jsdelivr.net/gh/wellingtonpragidi/rise-ajax@v1.0.0/src/rise-ajax.js"></script>
+<!-- codigo no CDN compactado -->
+<script src="https://cdn.jsdelivr.net/gh/wellingtonpragidi/rise-ajax@v1.0.0/src/rise-ajax.min.js"></script>
 ```
 ## Como Usar
 1. Requisições HTTP (***`RiseAjax`***`.request`)
