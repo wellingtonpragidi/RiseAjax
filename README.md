@@ -7,9 +7,9 @@ Biblioteca Rise: Requisição assíncrona estilo AJAX do jQuery, muito leve com 
 Adicione o arquivo JS ao seu projeto:  
 
 ```html
-<script src="assets/js/rise-ajax.js"></script>
+<script src="assets/js/rise.js"></script>
 <!-- codigo compactado -->
-<script src="assets/js/rise-ajax.min.js"></script>
+<script src="assets/js/rise.min.js"></script>
 ```
 ## Como Usar
 1. Requisições HTTP (***`rise`***`.request`)
