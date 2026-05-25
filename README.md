@@ -1,5 +1,5 @@
-[![GitHub release](https://img.shields.io/github/v/release/wellingtonpragidi/Rise)]()
-[![License](https://img.shields.io/github/license/wellingtonpragidi/Rise)]()
+[![GitHub release](https://img.shields.io/github/v/release/wellingtonpragidi/rise)]()
+[![License](https://img.shields.io/github/license/wellingtonpragidi/rise)]()
 # Rise
 Biblioteca Rise: Requisição assíncrona estilo AJAX do jQuery, muito leve com fade effects, formulários e JSON. Vanilla JS, sem dependências. MIT license.
 
@@ -12,10 +12,10 @@ Adicione o arquivo JS ao seu projeto:
 <script src="assets/js/rise-ajax.min.js"></script>
 ```
 ## Como Usar
-1. Requisições HTTP (***`Rise`***`.request`)
+1. Requisições HTTP (***`rise`***`.request`)
 ```javascript
 // Enviar JSON (Content-Type automatico)
-Rise.request({
+rise.request({
     url: 'api.php',
     method: 'POST',
     data: { action: 'update', id: 42 },
@@ -28,15 +28,15 @@ Rise.request({
     }
 });
 ```
-2. Formulários (***`Rise`***`.form`)
+2. Formulários (***`rise`***`.form`)
 ```javascript
 // Formulario tradicional (FormData)
-Rise.form('#myForm', {
+rise.form('#myForm', {
     success: (res) => alert('Enviado!')
 });
 
 // Formulario com JSON
-Rise.form('#loginForm', {
+rise.form('#loginForm', {
     contentType: 'application/json',
     success: (res) => {
     const data = JSON.parse(res);
@@ -49,18 +49,18 @@ Rise.form('#loginForm', {
 3. Efeitos Visuais
 ```javascript
 // Aparecer/Desaparecer
-Rise
+rise
   .appear('#result', 500) // Duração em ms
   .disappear('#result', 3000);
 
 // Trocar classes
-Rise.swapClass('.btn', 'hidden', 'active');
+rise.swapClass('.btn', 'hidden', 'active');
 ```
 4. Limpar Formulários
 ```javascript
-Rise.form('#cadastre', {
+rise.form('#cadastre', {
     success: () => {
-        Rise.clearFields(); // Limpa os campos após envio
+        rise.clearFields(); // Limpa os campos após envio
     }
 });
 ```
@@ -87,13 +87,13 @@ Inputs sem atributo `name`, atributo `name` sem valor ou valor incorreto.
 ```
 3. `clearFields()` não funciona
 **Causa:**  
-O formulário não foi registrado com ***`Rise`***`.form`.  
+O formulário não foi registrado com ***`rise`***`.form`.  
 
 **Solução:**  
 ```javascript
-Rise.form('#myForm'); // Registra o formulário primeiro
+rise.form('#myForm'); // Registra o formulário primeiro
 // ... depois:
-Rise.clearFields();
+rise.clearFields();
 ```
 ### Métodos Disponíveis
 <table>
@@ -138,13 +138,13 @@ echo json_encode( $data );
 ```
 Frontend:  
 ```javascript
-Rise.request({
+rise.request({
   url: 'api.php',
   method: 'POST',
   data: { nome: 'Wellington' },
   success: (res) => {
     const data = JSON.parse(res);
-    Rise.appear('#alert').swapClass('#alert', 'hidden', 'success');
+    rise.appear('#alert').swapClass('#alert', 'hidden', 'success');
   }
 });
 ```
