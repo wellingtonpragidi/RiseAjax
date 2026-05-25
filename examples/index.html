@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <h1>Exemplo básico para envio de formulário com <code>Rise()</code></h1>
+    <h1>Exemplo básico para envio de formulário com <code>rise()</code></h1>
 
     <form id="myForm" method="POST" action="">
     	<input type="text" name="name" />
@@ -18,14 +18,14 @@
 
 <script src="../assets/js/rise-ajax.js"></script>
 <script>
-Rise.form('#myForm', {
+rise.form('#myForm', {
 	url: 'controller.php',
 	success: (callback) => {
 		var result = JSON.parse(callback);
 		var show = result.text + result.name + result.date;
 		document.getElementById('result').innerHTML = show;
-		Rise.appear('#result').disappear('#result', 3000);
-		Rise.clearFields();
+		rise.appear('#result').disappear('#result', 3000);
+		rise.clearFields();
 	},
 	error: (err) => {
 		console.error( 'Erro:', err );
