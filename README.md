@@ -1,7 +1,7 @@
-[![GitHub release](https://img.shields.io/github/v/release/wellingtonpragidi/RiseAjax)]()
-[![License](https://img.shields.io/github/license/wellingtonpragidi/RiseAjax)]()
-# RiseAjax
-Biblioteca RiseAjax: AJAX estilo jQuery, MUITO LEVE com fade effects, formulários e JSON. Vanilla JS, sem dependências. MIT license - pra quem odeia complicação!  
+[![GitHub release](https://img.shields.io/github/v/release/wellingtonpragidi/Rise)]()
+[![License](https://img.shields.io/github/license/wellingtonpragidi/Rise)]()
+# Rise
+Biblioteca Rise: Requisição assíncrona estilo AJAX do jQuery, muito leve com fade effects, formulários e JSON. Vanilla JS, sem dependências. MIT license.
 
 ## Instalação
 Adicione o arquivo JS ao seu projeto:  
@@ -10,16 +10,12 @@ Adicione o arquivo JS ao seu projeto:
 <script src="assets/js/rise-ajax.js"></script>
 <!-- codigo compactado -->
 <script src="assets/js/rise-ajax.min.js"></script>
-<!-- CDN -->
-<script src="https://cdn.jsdelivr.net/gh/wellingtonpragidi/rise-ajax@v1.0.0/src/rise-ajax.js"></script>
-<!-- codigo no CDN compactado -->
-<script src="https://cdn.jsdelivr.net/gh/wellingtonpragidi/rise-ajax@v1.0.0/src/rise-ajax.min.js"></script>
 ```
 ## Como Usar
-1. Requisições HTTP (***`RiseAjax`***`.request`)
+1. Requisições HTTP (***`Rise`***`.request`)
 ```javascript
 // Enviar JSON (Content-Type automatico)
-RiseAjax.request({
+Rise.request({
     url: 'api.php',
     method: 'POST',
     data: { action: 'update', id: 42 },
@@ -32,15 +28,15 @@ RiseAjax.request({
     }
 });
 ```
-2. Formulários (***`RiseAjax`***`.form`)
+2. Formulários (***`Rise`***`.form`)
 ```javascript
 // Formulario tradicional (FormData)
-RiseAjax.form('#myForm', {
+Rise.form('#myForm', {
     success: (res) => alert('Enviado!')
 });
 
 // Formulario com JSON
-RiseAjax.form('#loginForm', {
+Rise.form('#loginForm', {
     contentType: 'application/json',
     success: (res) => {
     const data = JSON.parse(res);
@@ -53,18 +49,18 @@ RiseAjax.form('#loginForm', {
 3. Efeitos Visuais
 ```javascript
 // Aparecer/Desaparecer
-RiseAjax
+Rise
   .appear('#result', 500) // Duração em ms
   .disappear('#result', 3000);
 
 // Trocar classes
-RiseAjax.swapClass('.btn', 'hidden', 'active');
+Rise.swapClass('.btn', 'hidden', 'active');
 ```
 4. Limpar Formulários
 ```javascript
-RiseAjax.form('#cadastre', {
+Rise.form('#cadastre', {
     success: () => {
-        RiseAjax.clearFields(); // Limpa os campos após envio
+        Rise.clearFields(); // Limpa os campos após envio
     }
 });
 ```
@@ -91,13 +87,13 @@ Inputs sem atributo `name`, atributo `name` sem valor ou valor incorreto.
 ```
 3. `clearFields()` não funciona
 **Causa:**  
-O formulário não foi registrado com ***`RiseAjax`***`.form`.  
+O formulário não foi registrado com ***`Rise`***`.form`.  
 
 **Solução:**  
 ```javascript
-RiseAjax.form('#myForm'); // Registra o formulário primeiro
+Rise.form('#myForm'); // Registra o formulário primeiro
 // ... depois:
-RiseAjax.clearFields();
+Rise.clearFields();
 ```
 ### Métodos Disponíveis
 <table>
@@ -142,13 +138,13 @@ echo json_encode( $data );
 ```
 Frontend:  
 ```javascript
-RiseAjax.request({
+Rise.request({
   url: 'api.php',
   method: 'POST',
   data: { nome: 'Wellington' },
   success: (res) => {
     const data = JSON.parse(res);
-    RiseAjax.appear('#alert').swapClass('#alert', 'hidden', 'success');
+    Rise.appear('#alert').swapClass('#alert', 'hidden', 'success');
   }
 });
 ```
