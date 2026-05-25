@@ -1,10 +1,10 @@
 /**
- * RISE AJAX - Biblioteca moderna para requisiçoes HTTP e manipulaçao de DOM
+ * rise AJAX - Biblioteca moderna para requisiçoes HTTP e manipulaçao de DOM
  * @author Wellington Pragidi
  * @version 1.0
  * @license MIT
  */
-const Rise = {
+const rise = {
     /**
     * Armazena a referência do ultimo formulario manipulado
     * @type {HTMLFormElement|null}
@@ -133,7 +133,7 @@ const Rise = {
     //----- Limpa campos do ultimo form usado -----//
     clearFields: function() {
         if( ! this._lastForm ) {
-            console.warn('Nenhum formulario foi registrado. Use Rise.form() primeiro.');
+            console.warn('Nenhum formulario foi registrado. Use rise.form() primeiro.');
             return;
         }
         let formElement = this._lastForm.querySelectorAll('input, textarea, select');
