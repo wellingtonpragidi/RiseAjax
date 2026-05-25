@@ -4,7 +4,7 @@
  * @version 1.0
  * @license MIT
  */
-const RiseAjax = {
+const Rise = {
     /**
     * Armazena a referência do ultimo formulario manipulado
     * @type {HTMLFormElement|null}
@@ -133,7 +133,7 @@ const RiseAjax = {
     //----- Limpa campos do ultimo form usado -----//
     clearFields: function() {
         if( ! this._lastForm ) {
-            console.warn('Nenhum formulario foi registrado. Use RiseAjax.form() primeiro.');
+            console.warn('Nenhum formulario foi registrado. Use Rise.form() primeiro.');
             return;
         }
         let formElement = this._lastForm.querySelectorAll('input, textarea, select');
