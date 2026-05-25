@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Rise Ajax</title>
+	<title>Rise</title>
 </head>
 <body>
 
-    <h1>Exemplo básico para envio de formulário com <code>RiseAjax()</code></h1>
+    <h1>Exemplo básico para envio de formulário com <code>Rise()</code></h1>
 
     <form id="myForm" method="POST" action="">
     	<input type="text" name="name" />
@@ -18,14 +18,14 @@
 
 <script src="../assets/js/rise-ajax.js"></script>
 <script>
-RiseAjax.form('#myForm', {
+Rise.form('#myForm', {
 	url: 'controller.php',
 	success: (callback) => {
 		var result = JSON.parse(callback);
 		var show = result.text + result.name + result.date;
 		document.getElementById('result').innerHTML = show;
-		RiseAjax.appear('#result').disappear('#result', 3000);
-		RiseAjax.clearFields();
+		Rise.appear('#result').disappear('#result', 3000);
+		Rise.clearFields();
 	},
 	error: (err) => {
 		console.error( 'Erro:', err );
